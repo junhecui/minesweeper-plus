@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool isMine;
+    public int adjacentMines
+
+    public void Reveal()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        if (isMine)
+        {
+            Debug.Log("Game Over");
+        }
+        else
+        {
+            Reveal();
+        }
     }
 }
